@@ -8,8 +8,8 @@
   --dark-navy: #082A4D;          /* Matches the dark 'PLATINUM' text */
   
   /* --- BACKGROUNDS --- */
-  --soft-bg: #e4ecf8;            /* Changed to a very subtle, cool icy-white */
-  --white: #dce8eb;
+  --soft-bg: #f4f7fc;            /* Changed to a very subtle, cool icy-white */
+  --white: #eaeaea;
   --text-dark: #222222;
   --text-light: #555555;
   
@@ -61,7 +61,7 @@ h1, h2, h3, h4 {
   padding: 0 5%; /* Removed vertical padding to tighten it up */
   height: 90px; /* STRICT HEIGHT: Forcing the header to stay sleek */
   z-index: 1000;
-  border-bottom: 5px solid #082A4D;
+  border-bottom: 1px solid #082A4D;
 }
 
 .logo {

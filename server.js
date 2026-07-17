@@ -7,11 +7,12 @@ require('dotenv').config();
 
 const app = express();
 
+
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public'))); 
+app.use(express.static(__dirname));
 
 // Configure Multer to hold the CV in memory 
 const storage = multer.memoryStorage();
@@ -53,7 +54,7 @@ app.post('/api/contact', async (req, res) => {
       text: `Dear ${name},\n\nThank you for getting in touch. A member of our care team will review your inquiry and contact you shortly.\n\nWarm regards,\nThe Team at Platinum Carers Ltd`
     });
 
-    res.send('<h2>Inquiry Sent Successfully. We will be in touch!</h2><a href="/">Return Home</a>');
+    res.redirect('/success.html');
   } catch (error) {
     console.error("Contact Form Error:", error);
     res.status(500).send('Error sending message. Please try again.');
@@ -92,7 +93,7 @@ app.post('/api/apply', upload.single('cv'), async (req, res) => {
       text: `Dear ${name},\n\nThank you for applying to join the Platinum Carers team. We have successfully received your application and CV.\n\nOur recruitment team will review your details and contact you if you are selected for an interview.\n\nWarm regards,\nPlatinum Carers Ltd`
     });
 
-    res.send('<h2>Application Submitted Successfully. Good luck!</h2><a href="/">Return Home</a>');
+    res.redirect('/success.html');
   } catch (error) {
     console.error("Application Error:", error);
     res.status(500).send('Error submitting application. Please try again.');
