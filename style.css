@@ -61,7 +61,7 @@ h1, h2, h3, h4 {
   padding: 0 5%; /* Removed vertical padding to tighten it up */
   height: 90px; /* STRICT HEIGHT: Forcing the header to stay sleek */
   z-index: 1000;
-  border-bottom: 5px, #082A4D;
+  border-bottom: 5px solid #082A4D;
 }
 
 .logo {
@@ -707,7 +707,7 @@ label {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Strictly forces two equal columns */
   align-items: center; /* Vertically centers the text with the image */
-  background-color: var(--bg-white);
+  background-color: var(--white);
   max-width: 1200px;
   margin: 60px auto; /* Centers the section and adds vertical spacing */
   border-radius: 8px;
@@ -785,7 +785,7 @@ label {
 }
 
 .form-card, .service-split {
-  background: var(--bg-white);
+  background: var(--white);
   border: 1px solid #E2E8F0;
   border-radius: 12px; /* Smoother, larger radius */
   padding: 40px;
