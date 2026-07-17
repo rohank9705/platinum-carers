@@ -1,0 +1,798 @@
+/* =========================================
+   1. VARIABLES & BASE SETUP
+   ========================================= */
+:root {
+  /* --- NEW LOGO COLORS --- */
+  --primary-cyan: #38B6FF;       /* Matches the bright heartbeat icon */
+  --primary-cyan-hover: #1DA0EE; /* Slightly darker for button hovers */
+  --dark-navy: #082A4D;          /* Matches the dark 'PLATINUM' text */
+  
+  /* --- BACKGROUNDS --- */
+  --soft-bg: #e4ecf8;            /* Changed to a very subtle, cool icy-white */
+  --white: #dce8eb;
+  --text-dark: #222222;
+  --text-light: #555555;
+  
+  /* --- FONTS & SPACING --- */
+  --font-heading: 'Lora', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --border-radius-lg: 24px;
+  --box-shadow-soft: 0 12px 35px rgba(8, 42, 77, 0.06); /* Shadow is now tinted navy */
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  background-color: var(--soft-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  color: var(--dark-navy);
+  margin-top: 0;
+  font-family: var(--font-heading);
+}
+
+.badge, .team-card .title {
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Adds that spacious, premium feel */
+  font-weight: 600;
+}
+
+
+
+/* =========================================
+   HEADER & NAVIGATION FIX
+   ========================================= */
+.main-header.sticky {
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%; /* Removed vertical padding to tighten it up */
+  height: 90px; /* STRICT HEIGHT: Forcing the header to stay sleek */
+  z-index: 1000;
+  border-bottom: 5px, #082A4D;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100px; /* Match header height so it doesn't push things around */
+  /* This prevents the header from hiding the zoomed logo */
+  overflow: visible; 
+}
+
+.logo a {
+  display: block;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-img {
+  width: 250px !important; 
+  height: auto !important;
+  
+  /* Keep the zoom, but you might need to lower it to 1.3 or 1.4 now */
+  transform: scale(1.4); 
+  transform-origin: left center;
+  transition: opacity 0.3s ease;
+}
+
+.logo a:hover .header__logo-img {
+  opacity: 0.8;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .main-header.sticky {
+    height: 70px; /* Slimmer header on mobile */
+  }
+  .logo {
+    height: 70px;
+  }
+  .header__logo-img {
+    width: 180px !important;
+    transform: scale(1.2);
+  }
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark-slate);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-cyan);
+}
+
+
+/* =========================================
+   HERO SECTION (WITH VIDEO)
+   ========================================= */
+.hero-section {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 5%;
+  text-align: center;
+  overflow: hidden; /* This stops the video from spilling out of the section */
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops the video perfectly to fit any screen size */
+  z-index: 0;
+  pointer-events: none; /* Prevents users from accidentally right-clicking the video */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* An 85% opaque version of your original gradient to keep text readable */
+  background: linear-gradient(135deg, rgba(230, 242, 241, 0.6) 0%, rgba(244, 247, 246, 0.9) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 850px;
+  position: relative;
+  z-index: 2; /* Forces the text to sit on top of the video and overlay */
+}
+
+/* (Leave your existing .hero-content .badge, h1, and p rules exactly as they were) */
+
+.hero-content {
+  max-width: 850px;
+  z-index: 2;
+}
+
+/* The little pill-shaped indicator above the main title */
+.hero-content .badge {
+  display: inline-block;
+  background-color: rgba(56, 182, 255, 0.1); /* 10% opacity of Cyan */
+  color: var(--primary-cyan);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content h1 {
+  /* clamp() makes the font huge on desktop, but auto-shrinks on mobile */
+  font-size: clamp(2.5rem, 5vw, 4rem); 
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color: var(--dark-slate);
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   3. BUTTONS
+   ========================================= */
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 50px; /* Pill-shaped like the screenshots */
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--primary-cyan);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-cyan-hover);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--dark-navy);
+  color: var(--white);
+}
+
+/* =========================================
+   4. LAYOUT & SECTIONS
+   ========================================= */
+.section-light { 
+  background-color: var(--soft-bg); 
+  padding: 6rem 5%; 
+}
+
+.section-white { 
+  background-color: var(--white); 
+  padding: 6rem 5%; 
+}
+
+.section-header { 
+  text-align: center; 
+  margin-bottom: 4rem; 
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   5. THE "BOXES" (CARDS)
+   ========================================= */
+.grid-container, .team-grid, .split-forms {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* This targets every card to make them look uniform */
+.grid-card, .form-card, .team-card {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow-soft);
+  border: 1px solid #082A4D; /* Tiny border for definition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Contrast adjustment: If the section is already white, make the boxes soft-gray */
+.section-white .grid-card, 
+.section-white .form-card, 
+.section-white .team-card {
+  background: var(--soft-bg);
+  box-shadow: none; /* Flattens them slightly when on white */
+}
+
+/* Hover effect for interactive boxes */
+.grid-card:hover, .team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(38, 70, 83, 0.1);
+}
+
+/* Specific Card Tweaks */
+.grid-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.grid-card p {
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+/* =========================================
+   6. TEAM SECTION
+   ========================================= */
+.team-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-photo.placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--primary-cyan);
+  margin-bottom: 1.5rem;
+  opacity: 0.2; 
+}
+
+.team-card h3 {
+  margin-bottom: 0.2rem;
+}
+
+.team-card .title {
+  color: var(--primary-cyan);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/* =========================================
+   7. FORMS
+   ========================================= */
+form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.2rem; 
+  margin-top: 2rem;
+}
+
+input, textarea, select {
+  padding: 1.2rem;
+  border: 2px solid transparent;
+  background-color: var(--white);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* If the form is on a white card background, make inputs slightly gray */
+.section-white input, 
+.section-white textarea {
+  background-color: var(--white);
+  border: 1px solid #E0E0E0;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-cyan);
+  box-shadow: 0 0 0 4px rgba(56, 182, 255, 0.15); /* A soft cyan glow */
+}
+
+label {
+  font-weight: 600;
+  color: var(--dark-navy);
+  margin-bottom: -0.5rem;
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   FLIP CARDS (SERVICES) & LINKS
+   ========================================= */
+
+/* 1. The Container (Centers the bottom row automatically) */
+#services .grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0; /* Adjusted padding to match your layout */
+}
+
+/* 2. The Card Wrapper */
+.flip-card {
+  width: calc(33.333% - 1.35rem); 
+  height: 320px;
+  background-color: transparent;
+  perspective: 1000px; 
+}
+
+/* 3. The Inner Spinning Container */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1); 
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: translate3d(0,0,0); /* Hardware acceleration */
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow-soft);
+}
+
+/* 4. Trigger the flip on hover (Desktop) and JS class (Mobile) */
+.flip-card:hover .flip-card-inner,
+.flip-card.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+/* 5. Shared Front and Back Styles */
+.flip-card-front, 
+.flip-card-back {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* iOS Safari Text Bleed Fix */
+.flip-card-front *, 
+.flip-card-back * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* 6. The Front Face (Image) */
+.flip-card-front {
+  background-size: cover;
+  background-position: center;
+  z-index: 2; 
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+}
+
+/* Dark Navy Overlay for Image Readability */
+.flip-card-front::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(8, 42, 77, 0.35); 
+  z-index: 1;
+}
+
+.flip-card-front .front-content {
+  position: relative;
+  z-index: 2;
+}
+
+.flip-card-front h3 {
+  color: var(--white);
+  margin: 0;
+  font-size: 1.8rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* 7. The Back Face (Solid Color) */
+.flip-card-back {
+  background-color: rgb(218, 225, 232);
+  border: 2px solid var(--primary-cyan); 
+  z-index: 1;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.flip-card-back h3 {
+  color: var(--dark-navy);
+  margin-bottom: 1rem;
+}
+
+.flip-card-back p {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  margin-bottom: 1.5rem; /* Room for the Learn More link */
+}
+
+/* --- LEARN MORE LINKS --- */
+.learn_more_links {
+  margin-top: auto;
+  color: var(--dark-navy);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.learn_more_links:hover {
+  color: var(--primary-cyan); 
+  transform: translateY(-2px);
+  text-decoration: underline;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN FOR CARDS
+   ========================================= */
+
+/* Tablet: 2 Cards per row, 1 centered on bottom */
+@media (max-width: 1024px) {
+  .flip-card {
+    width: calc(50% - 1rem); 
+  }
+}
+
+/* Mobile: 1 Card per row */
+@media (max-width: 768px) {
+  .flip-card {
+    width: 100%; 
+  }
+}
+
+/* =========================================
+   CHUNKY FOOTER
+   ========================================= */
+.main-footer {
+  background-color: var(--dark-navy);
+  color: var(--soft-bg);
+  /* The large padding is what gives it the 'chunky' feel */
+  padding-top: 6rem; 
+  margin-top: 4rem; /* Pushes it away from the content above */
+}
+
+.main-footer .footer-top {
+  padding-bottom: 4rem;
+  /* Adds a subtle line separating the main footer from the bottom bar */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  align-items: start; /* Prevents columns from stretching weirdly */
+  gap: 3rem; /* Gives plenty of breathing room between columns */
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.footer-col h3 {
+  color: var(--primary-cyan);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.footer-col p {
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Links & Lists */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-links li {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+/* Interaction: Links slide slightly right and turn cyan */
+.footer-links a:hover {
+  color: var(--primary-cyan);
+  transform: translateX(5px); 
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.social-links a:hover {
+  background-color: var(--primary-cyan);
+  transform: translateY(-4px); /* Floats up on hover */
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 5%;
+  background-color: rgba(0, 0, 0, 0.25); /* Darkens the very bottom strip */
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* =========================================
+   MOBILE NAVIGATION FIX
+   ========================================= */
+.mobile-toggle {
+  display: none;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: var(--dark-navy);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block; /* Show hamburger on mobile */
+  }
+  
+  .nav-links {
+    display: flex; 
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    flex-direction: column;
+    padding: 1.5rem 0;
+    box-shadow: 0 15px 25px rgba(8, 42, 77, 0.1);
+    
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* ADD THIS: Stops the invisible menu from blocking taps */
+    transform: translateY(-20px); 
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 9999; /* Forces it to the absolute front */
+  }
+
+  /* This class will be added by JavaScript when the button is tapped */
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; /* ADD THIS: Re-enables tapping */
+    transform: translateY(0); 
+  }
+
+  .nav-links a {
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .nav-links .btn {
+    margin: 1rem auto;
+    width: 80%;
+  }
+}
+
+/* --- Service Split Section --- */
+.service-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Strictly forces two equal columns */
+  align-items: center; /* Vertically centers the text with the image */
+  background-color: var(--bg-white);
+  max-width: 1200px;
+  margin: 60px auto; /* Centers the section and adds vertical spacing */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Left Half: Image */
+.service-image {
+  height: 100%;/* Takes up 50% of the width */
+}
+
+.service-image img {
+  width: 100%;
+  max-height: 600px;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the space without stretching */
+  display: block;
+}
+
+/* Right Half: Content */
+.service-content {
+  flex: 1 1 50%; /* Takes up the other 50% */
+  padding: 50px;
+}
+
+.service-content h1 {
+  font-family: var(--font-heading);
+  color: var(--primary-navy);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.service-content p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.service-content ul {
+  color: var(--text-muted);
+  padding-left: 20px;
+}
+
+.service-content li {
+  margin-bottom: 10px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .service-split {
+    grid-template-columns: 1fr; /* Changes it to a single column on phones */
+  }
+  
+  .service-content {
+    padding: 30px 20px;
+  }
+}
+
+/* --- Scroll Fade-In Animation --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98); /* Added scale */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Optional: Add a slight delay if you want the text to fade in right after the image */
+.delay-200 {
+  transition-delay: 0.2s;
+}
+
+.form-card, .service-split {
+  background: var(--bg-white);
+  border: 1px solid #E2E8F0;
+  border-radius: 12px; /* Smoother, larger radius */
+  padding: 40px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); /* Soft, natural shadow */
+  transition: transform 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-5px); /* Gentle lift on hover */
+}

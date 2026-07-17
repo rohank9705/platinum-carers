@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Platinum Carers Ltd</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet" />
+  
+  <link rel="icon" type="image/png" href="images/Platinum_Carers_LOGO_JPEG-removebg-preview.png">
+
+  <style>
+    /* Global Variables */
+    :root {
+      --primary-navy: #0B2545;
+      --primary-cyan: #38B6FF;
+      --text-main: #333333;
+      --text-muted: #666666;
+      --bg-main: #F4F7F6;
+      --bg-white: #FFFFFF;
+      /* Using your imported fonts */
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-body);
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header Styles (Keeping your structure) */
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: var(--bg-white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .main-header.sticky {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header__logo-img {
+      max-height: 60px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: var(--primary-cyan);
+    }
+    .btn-primary {
+      background-color: var(--primary-navy);
+      color: var(--bg-white);
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: var(--primary-cyan);
+      color: var(--bg-white);
+    }
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    
+
+    /* Policy Layout Container */
+    .policy-wrapper {
+      max-width: 900px;
+      margin: 50px auto;
+      background-color: var(--bg-white);
+      padding: 60px 80px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .policy-wrapper h1 {
+      font-family: var(--font-heading);
+      color: var(--primary-navy);
+      font-size: 2.5rem;
+      border-bottom: 3px solid var(--primary-cyan);
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+    }
+
+    .policy-wrapper h2 {
+      font-family: var(--font-heading);
+      color: var(--primary-navy);
+      font-size: 1.5rem;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    .policy-wrapper p {
+      margin-bottom: 20px;
+      color: var(--text-muted);
+    }
+
+    .policy-wrapper ul {
+      margin-bottom: 25px;
+      color: var(--text-muted);
+      padding-left: 20px;
+    }
+
+    .policy-wrapper li {
+      margin-bottom: 10px;
+    }
+
+    .policy-wrapper strong {
+      color: var(--primary-navy);
+    }
+
+    .meta-info {
+      background-color: var(--bg-main);
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .meta-info strong {
+      color: var(--primary-navy);
+    }
+
+    /* Footer Styles */
+    .main-footer {
+      background-color: var(--primary-navy);
+      color: var(--bg-white);
+      padding: 60px 50px 20px;
+      font-family: var(--font-body);
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-col h3 {
+      font-family: var(--font-heading);
+      color: var(--primary-cyan);
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-links li {
+      margin-bottom: 12px;
+      color: #A0B0C0;
+    }
+    .footer-links a {
+      color: #A0B0C0;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover {
+      color: var(--bg-white);
+    }
+    .social-links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: var(--bg-white);
+      text-decoration: none;
+    }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      font-size: 0.9rem;
+      color: #A0B0C0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* Add JS to toggle this */
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .policy-wrapper {
+        margin: 20px;
+        padding: 30px;
+      }
+      .main-header, .main-footer {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="main-header sticky">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Platinum_Carers_LOGO_JPEG-removebg-preview.png" alt="Platinum Carers LTD Logo" class="header__logo-img" />
+      </a>
+    </div>
+    
+    <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+    
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#team">Our Family</a>
+      <a href="index.html#locations">Locations</a>
+      <a href="index.html#careers">Careers</a>
+      <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Main Policy Content -->
+  <main class="policy-wrapper">
+    <h1>Privacy Policy</h1>
+    
+    <div class="meta-info">
+      <strong>Effective Date:</strong> July 13, 2026<br>
+      <strong>Company Name:</strong> Platinum Carers Ltd<br>
+      <strong>Company Number:</strong> SC878500<br>
+      <strong>Registered Office:</strong> 41 Morrison Street, Glasgow, Scotland, G5 8LB
+    </div>
+
+    <h2>1. Introduction</h2>
+    <p>At Platinum Carers Ltd, your privacy and dignity are our top priorities. We provide compassionate, high-quality domiciliary care across Glasgow. To deliver these services safely and effectively, we must collect and process personal data.</p>
+    <p>This Privacy Policy outlines how we collect, use, store, and protect your information in strict accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. We are fully registered with the Information Commissioner’s Office (ICO) and the Care Inspectorate.</p>
+
+    <h2>2. Our Lawful Basis for Processing</h2>
+    <p>Under the UK GDPR, we must have a valid lawful basis to process your data. We rely on the following grounds:</p>
+    <ul>
+      <li><strong>Performance of a Contract:</strong> To assess your needs and provide the agreed-upon home care services.</li>
+      <li><strong>Legal Obligation:</strong> To comply with Care Inspectorate regulations, health and safety laws, and statutory safeguarding duties.</li>
+      <li><strong>Special Category Data (Article 9):</strong> Because we handle highly sensitive health and medical data, our processing is necessary for the "provision of health or social care and treatment."</li>
+    </ul>
+
+    <h2>3. Information We Collect</h2>
+    <p>To provide tailored, person-centred support, we collect both standard and sensitive personal data.</p>
+    
+    <p><strong>Personal Data:</strong></p>
+    <ul>
+      <li><strong>Contact Information:</strong> Name, address, telephone number, and email address.</li>
+      <li><strong>Emergency Contacts:</strong> Details of family members or designated next of kin.</li>
+      <li><strong>Financial Details:</strong> Invoicing and payment information.</li>
+    </ul>
+
+    <p><strong>Sensitive Personal Data (Special Category):</strong></p>
+    <ul>
+      <li><strong>Health and Medical Information:</strong> Details regarding medical conditions (e.g., diabetes, dementia), mobility issues, fall risks, and cognitive capacity.</li>
+      <li><strong>Medication & Nutritional Records:</strong> Prescribed medications, dosages, dietary needs, and swallowing difficulties.</li>
+      <li><strong>Cultural and Religious Preferences:</strong> Specific cultural sensitivities, religious practices, and requests for same-gender care staff.</li>
+      <li><strong>Care Logs:</strong> Daily logs of services provided, changes in client health, and any documented incidents or concerns.</li>
+    </ul>
+
+    <h2>4. How We Use Your Information</h2>
+    <p>Your data is strictly used for the provision and management of your care. We process your information to:</p>
+    <ul>
+      <li>Deliver personalised care packages and maintain accurate digital care plans.</li>
+      <li>Safeguard your health and safety by assessing risks and implementing preventative measures.</li>
+      <li>Process invoices and manage financial accounts.</li>
+      <li>Ensure compliance with Care Inspectorate regulatory requirements.</li>
+    </ul>
+    <p><em>We do not use automated decision-making or profiling to determine your care.</em></p>
+
+    <h2>5. Sharing Your Information & Safeguarding</h2>
+    <p>We treat your personal data with the utmost confidentiality. We will only share your information when it is necessary for your care or required by law. Third parties we may share data with include:</p>
+    <ul>
+      <li><strong>Healthcare Providers:</strong> GPs, pharmacies, and district nurses to coordinate medical and medication support.</li>
+      <li><strong>Emergency Services:</strong> In the event of a medical emergency.</li>
+    </ul>
+
+    <p><strong>Multi-Agency Safeguarding:</strong><br>
+    Under the Adult Support and Protection (Scotland) Act 2007, we have a strict legal duty to protect adults at risk. In cases where there is a concern of harm, abuse, or neglect, we are legally required to share your information—even without your explicit consent—with:</p>
+    <ul>
+      <li>Glasgow City HSCP Adult Protection Team / Social Care Direct.</li>
+      <li>Police Scotland (if a criminal offence is suspected).</li>
+      <li>The Care Inspectorate.</li>
+    </ul>
+
+    <h2>6. Data Storage, Security, and International Transfers</h2>
+    <p>We implement robust security measures to protect your personal information from unauthorised access, loss, or misuse:</p>
+    <ul>
+      <li><strong>Digital Systems:</strong> We utilise digital care management procedures and secure Google Drive cloud facilities to store client records and policies.</li>
+      <li><strong>International Transfers:</strong> Because Google Drive utilizes cloud servers, your data may occasionally be transferred outside of the UK. When this happens, we ensure strict UK GDPR compliance by utilizing Standard Contractual Clauses or ensuring the host country possesses an adequacy decision from the UK government.</li>
+      <li><strong>Physical Security:</strong> Hard copy documentation is kept in secure storage at our registered office.</li>
+      <li><strong>Staff Training:</strong> All care and administrative staff undergo mandatory data protection and safeguarding training.</li>
+    </ul>
+
+    <h2>7. Data Retention Periods</h2>
+    <p>We only keep your personal information for as long as necessary to fulfil the purposes we collected it for, including satisfying any legal, accounting, or reporting requirements. Our retention periods are as follows:</p>
+    <ul>
+      <li><strong>Client Care Records:</strong> Retained in line with statutory health and social care guidelines (typically a minimum of 3 years after the last date of service provision).</li>
+      <li><strong>Recruitment & Candidate Data:</strong> Information collected from unsuccessful job applicants is securely destroyed after 6 months to ensure fair recruitment practices.</li>
+      <li><strong>Staff Right-to-Work Checks:</strong> Immigration and identity documents are kept for the duration of the staff member's employment and for a further 2 years after their employment ends.</li>
+      <li><strong>Recruitment Complaints:</strong> All materials relating to recruitment complaints are deleted 12 months after the date of a final decision being made.</li>
+    </ul>
+
+    <h2>8. Website Cookies and Tracking</h2>
+    <p>Our professional website is SEO-optimised to help local clients find our services. We may use cookies and similar tracking technologies to analyze site traffic and run targeted local social media ads (e.g., on Facebook, Instagram, and TikTok). You will be presented with a cookie consent banner upon visiting our site, allowing you to opt-in or opt-out of non-essential tracking cookies.</p>
+
+    <h2>9. Your Data Protection Rights</h2>
+    <p>Under the UK GDPR, you possess several rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right of Access:</strong> You can request a copy of the personal data we hold about you.</li>
+      <li><strong>Right to Rectification:</strong> You can ask us to correct any inaccurate or incomplete information.</li>
+      <li><strong>Right to Erasure:</strong> You can request the deletion of your personal data when it is no longer legally necessary.</li>
+      <li><strong>Right to Restrict Processing:</strong> You can ask us to limit how we use your data.</li>
+      <li><strong>Right to Object:</strong> You can object to the processing of your data in certain circumstances.</li>
+    </ul>
+
+    <h2>10. Contact Us & Complaints</h2>
+    <p>If you have any questions about this Privacy Policy, wish to exercise your data rights, or have a concern regarding how we handle your information, please contact our Registered Manager, Rehana Khan:</p>
+    <ul>
+      <li><strong>Office Address:</strong> 41 Morrison Street, Glasgow, Scotland, G5 8LB</li>
+      <li><strong>Email:</strong> Rak7867777@gmail.com</li>
+      <li><strong>Operating Hours:</strong> 9:00 AM – 5:00 PM, Monday to Friday</li>
+    </ul>
+
+    <p><strong>Right to Complain to the ICO:</strong><br>
+    If you feel we have not handled your data correctly, you have the right to lodge a formal complaint with the Information Commissioner's Office (ICO). You can contact them via their website at www.ico.org.uk or by calling 0303 123 1113.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-top grid-container">
+      
+      <!-- Column 1: Brand Info -->
+      <div class="footer-col brand-col">
+        <h2 class="footer-logo" style="color: var(--bg-white); margin-bottom: 1rem; font-family: var(--font-heading);">
+          PLATINUM <span style="color: var(--primary-cyan);">Carers</span>
+        </h2>
+        <p style="color: #A0B0C0; font-size: 0.9rem;">Delivering high-quality, professional, and tailored care services to support independence, comfort, and dignity at home.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="LinkedIn">LI</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#services">Our Services</a></li>
+          <li><a href="index.html#team">Our Family</a></li>
+          <li><a href="index.html#locations">Locations</a></li>
+          <li><a href="index.html#careers">Careers & Recruitment</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact Info -->
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="footer-links">
+          <li style="color: var(--bg-white); font-weight: 600;">Head Office</li>
+          <li>📞 01234 567 890</li>
+          <li><a href="mailto:head-office@platinum-carers.com">head-office@platinum-carers.com</a></li>
+          <li>📍 41 Morrison Street, Glasgow, G5 8LB</li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Policies -->
+      <div class="footer-col">
+        <h3>Legal Info</h3>
+        <ul class="footer-links">
+          <!-- UPDATED DOWNLOAD LINK HERE -->
+          <li><a href="Platinum_Carers_Privacy_Policy.pdf" download>Download Privacy Policy (PDF)</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Safeguarding Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Platinum Carers Ltd. All rights reserved. Registered UK care provider.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

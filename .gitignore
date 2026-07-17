@@ -1,0 +1,9 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+
+# Environment variables (CRITICAL FOR SECURITY)
+.env
+
+# Mac system files (if you or anyone else opens it on a Mac)
+.DS_Store
