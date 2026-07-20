@@ -8,8 +8,8 @@
   --dark-navy: #082A4D;          /* Matches the dark 'PLATINUM' text */
   
   /* --- BACKGROUNDS --- */
-  --soft-bg: #f4f7fc;            /* Changed to a very subtle, cool icy-white */
-  --white: #eaeaea;
+  --soft-bg: #F0F4F8;            /* A very clean, professional light slate-blue/gray */
+  --white: #FFFFFF;              /* True crisp white for maximum contrast */
   --text-dark: #222222;
   --text-light: #555555;
   
