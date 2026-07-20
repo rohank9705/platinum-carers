@@ -1,0 +1,28 @@
+{
+  "name": "platinum-carers-ltd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohank9705/platinum-carers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohank9705/platinum-carers/issues"
+  },
+  "homepage": "https://github.com/rohank9705/platinum-carers#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "multer": "^2.2.0",
+    "nodemailer": "^9.0.3"
+  }
+}
