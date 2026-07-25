@@ -194,7 +194,7 @@ h1, h2, h3, h4 {
   font-size: clamp(2.5rem, 5vw, 4rem); 
   line-height: 1.15;
   margin-bottom: 1.5rem;
-  color: var(--dark-slate);
+  color: var(--dark-navy);
   font-weight: 800;
 }
 
