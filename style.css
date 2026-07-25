@@ -68,7 +68,7 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  height: 100px; /* Match header height so it doesn't push things around */
+  height: 120px; /* Match header height so it doesn't push things around */
   /* This prevents the header from hiding the zoomed logo */
   overflow: visible; 
 }
@@ -81,7 +81,8 @@ h1, h2, h3, h4 {
 }
 
 .header__logo-img {
-  width: 250px !important; 
+  margin-top: 15px;
+  width: 300px !important; 
   height: auto !important;
   
   /* Keep the zoom, but you might need to lower it to 1.3 or 1.4 now */
@@ -795,4 +796,37 @@ label {
 
 .form-card:hover {
   transform: translateY(-5px); /* Gentle lift on hover */
+}
+
+/* --- SVG Map Path Animation --- */
+.map-path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: drawBranches 2s ease-out forwards;
+}
+
+@keyframes drawBranches {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* --- Footer Creator Tag --- */
+.creator-tag {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(8, 42, 77, 0.1); /* Subtle dark navy border */
+  font-size: 0.9rem;
+  color: #666666; /* Soft grey so it doesn't distract from main content */
+}
+
+.creator-tag a {
+  color: #355575;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.creator-tag a:hover {
+  color: var(--primary-cyan, #38b6ff);
 }

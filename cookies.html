@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Policy | Platinum Carers Ltd</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/Platinum_Carers_LOGO_JPEG-removebg-preview.png"
+    />
+
+    <style>
+      /* Global Variables */
+      :root {
+        --primary-navy: #0b2545;
+        --primary-cyan: #38b6ff;
+        --text-main: #333333;
+        --text-muted: #666666;
+        --bg-main: #f4f7f6;
+        --bg-white: #ffffff;
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Inter", sans-serif;
+      }
+
+      /* General Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: var(--font-body);
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        line-height: 1.7;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Header Styles */
+      .main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff; /* Forces a solid opaque white */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+        height: 90px;
+        z-index: 1000;
+        border-bottom: 1px solid #082a4d;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); /* Keeps the shadow clean */
+      }
+
+      .main-header.sticky {
+        position: sticky;
+        background-color: #ffffff; /* Double-ensures solidity on scroll */
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        height: 120px; /* Match header height so it doesn't push things around */
+        /* This prevents the header from hiding the zoomed logo */
+        overflow: visible;
+      }
+
+      .logo a {
+        display: block;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .header__logo-img {
+        margin-top: 15px;
+        width: 300px !important;
+        height: auto !important;
+
+        /* Keep the zoom, but you might need to lower it to 1.3 or 1.4 now */
+        transform: scale(1.4);
+        transform-origin: left center;
+        transition: opacity 0.3s ease;
+      }
+      .nav-links {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        font-weight: 500;
+      }
+      .nav-links a:hover {
+        color: var(--primary-cyan);
+      }
+      .btn-primary {
+        background-color: var(--primary-navy);
+        color: var(--bg-white);
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+      .btn-primary:hover {
+        background-color: var(--primary-cyan);
+        color: var(--bg-white);
+      }
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      /* Policy Layout Container */
+      .policy-wrapper {
+        max-width: 900px;
+        margin: 50px auto;
+        background-color: var(--bg-white);
+        padding: 60px 80px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      }
+
+      .policy-wrapper h1 {
+        font-family: var(--font-heading);
+        color: var(--primary-navy);
+        font-size: 2.5rem;
+        border-bottom: 3px solid var(--primary-cyan);
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+      }
+
+      .policy-wrapper h2 {
+        font-family: var(--font-heading);
+        color: var(--primary-navy);
+        font-size: 1.5rem;
+        margin-top: 40px;
+        margin-bottom: 15px;
+      }
+
+      .policy-wrapper p {
+        margin-bottom: 20px;
+        color: var(--text-muted);
+      }
+
+      .policy-wrapper ul {
+        margin-bottom: 25px;
+        color: var(--text-muted);
+        padding-left: 20px;
+      }
+
+      .policy-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .policy-wrapper strong {
+        color: var(--primary-navy);
+      }
+
+      .meta-info {
+        background-color: var(--bg-main);
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 40px;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+      }
+
+      .meta-info strong {
+        color: var(--primary-navy);
+      }
+
+      /* Footer Styles */
+      .main-footer {
+        background-color: var(--primary-navy);
+        color: var(--bg-white);
+        padding: 60px 50px 20px;
+        font-family: var(--font-body);
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+      .footer-col h3 {
+        font-family: var(--font-heading);
+        color: var(--primary-cyan);
+        margin-bottom: 20px;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-links li {
+        margin-bottom: 12px;
+        color: #a0b0c0;
+      }
+      .footer-links a {
+        color: #a0b0c0;
+        transition: color 0.3s;
+      }
+      .footer-links a:hover {
+        color: var(--bg-white);
+      }
+      .social-links a {
+        display: inline-block;
+        margin-right: 15px;
+        color: var(--bg-white);
+        text-decoration: none;
+      }
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        font-size: 0.9rem;
+        color: #a0b0c0;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .mobile-toggle {
+          display: block;
+        }
+        .policy-wrapper {
+          margin: 20px;
+          padding: 30px;
+        }
+        .main-header,
+        .main-footer {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="main-header sticky">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="images/Platinum_Carers_LOGO_JPEG-removebg-preview.png"
+            alt="Platinum Carers LTD Logo"
+            class="header__logo-img"
+          />
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#team">Our Family</a>
+        <a href="index.html#locations">Locations</a>
+        <a href="index.html#careers">Careers</a>
+        <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+      </nav>
+    </header>
+
+    <!-- Main Policy Content -->
+    <main class="policy-wrapper">
+      <h1>Cookie Policy</h1>
+
+      <div class="meta-info">
+        <strong>Effective Date:</strong> July 13, 2026<br />
+        <strong>Company Name:</strong> Platinum Carers Ltd<br />
+        <strong>Company Number:</strong> SC878500<br />
+        <strong>Registered Office:</strong> 41 Morrison Street, Glasgow,
+        Scotland, G5 8LB
+      </div>
+
+      <h2>1. Introduction</h2>
+      <p>
+        This Cookie Policy explains how Platinum Carers Ltd ("we", "our", or
+        "us") uses cookies and similar tracking technologies when you visit our
+        website. By using our website, you agree to the use of cookies as
+        described in this policy.
+      </p>
+
+      <h2>2. What Are Cookies?</h2>
+      <p>
+        Cookies are small text files that are stored on your computer or mobile
+        device when you visit a website. They are widely used to make websites
+        work more efficiently, as well as to provide reporting information and
+        improve user experience.
+      </p>
+
+      <h2>3. How We Use Cookies</h2>
+      <p>
+        Platinum Carers Ltd uses cookies for several key purposes to support our
+        digital marketing and local search optimization goals:
+      </p>
+      <ul>
+        <li>
+          <strong>Essential Cookies:</strong> Required for the operation of our
+          website, enabling core functionalities such as secure page navigation
+          and access to secure areas.
+        </li>
+        <li>
+          <strong>Analytical / Performance Cookies:</strong> Allow us to
+          recognize and count the number of visitors and see how visitors move
+          around our website. This helps us improve how our website works.
+        </li>
+        <li>
+          <strong>Targeting / Advertising Cookies:</strong> Used to track
+          visitors across websites to display relevant local social media
+          advertisements (e.g., across Facebook, Instagram, and TikTok) and
+          measure the effectiveness of our campaigns targeting family
+          decision-makers in Glasgow.
+        </li>
+      </ul>
+
+      <h2>4. Managing and Disabling Cookies</h2>
+      <p>
+        When you first visit our website, a cookie banner will provide you with
+        the option to accept or decline non-essential cookies. Additionally, you
+        can control and manage cookies through your web browser settings. Please
+        note that removing or blocking cookies can impact your user experience
+        and parts of our website may no longer be fully accessible.
+      </p>
+
+      <h2>5. Updates to This Cookie Policy</h2>
+      <p>
+        We may update this Cookie Policy from time to time to reflect changes in
+        technology, legal requirements, or our operational practices. Any
+        updates will be posted on this page with a revised effective date.
+      </p>
+
+      <h2>6. Contact Us</h2>
+      <p>
+        If you have any questions about our use of cookies or other
+        technologies, please contact us:
+      </p>
+      <ul>
+        <li>
+          <strong>Registered Office:</strong> 41 Morrison Street, Glasgow,
+          Scotland, G5 8LB
+        </li>
+        <li><strong>Email:</strong> headoffice@platinum-carers.com</li>
+        <li><strong>Telephone:</strong> 01234 567 890 / 0141 287 0555</li>
+      </ul>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-top grid-container">
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <h2
+            class="footer-logo"
+            style="
+              color: var(--bg-white);
+              margin-bottom: 1rem;
+              font-family: var(--font-heading);
+            "
+          >
+            PLATINUM <span style="color: var(--primary-cyan)">Carers</span>
+          </h2>
+          <p style="color: #a0b0c0; font-size: 0.9rem">
+            Delivering high-quality, professional, and tailored care services to
+            support independence, comfort, and dignity at home.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#services">Our Services</a></li>
+            <li><a href="index.html#team">Our Family</a></li>
+            <li><a href="index.html#locations">Locations</a></li>
+            <li><a href="index.html#careers">Careers & Recruitment</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li style="color: var(--bg-white); font-weight: 600">
+              Head Office
+            </li>
+            <li>📞 01234 567 890</li>
+            <li>
+              <a href="mailto:head-office@platinum-carers.com"
+                >head-office@platinum-carers.com</a
+              >
+            </li>
+            <li>📍 41 Morrison Street, Glasgow, G5 8LB</li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal & Policies -->
+        <div class="footer-col">
+          <h3>Legal Info</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="Platinum_Carers_Privacy_Policy.pdf" download
+                >Download Privacy Policy (PDF)</a
+              >
+            </li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="#">Safeguarding Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+    <div class="creator-tag">
+        <p>&copy; 2026 Platinum Carers Ltd. All rights reserved. | Designed & Developed by <a href="https://github.com/rohank9705" target="_blank" rel="noopener noreferrer">Rohan</a></p>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

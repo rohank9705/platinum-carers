@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 120" width="100%" height="100%">
+  <!-- Heartbeat / Heart Icon -->
+  <path d="M 15 65 
+           L 30 65 
+           L 35 85 
+           L 45 35 
+           L 55 95 
+           L 65 55
+           C 65 30, 95 30, 100 50
+           C 105 30, 135 30, 135 55
+           L 100 95" 
+        fill="none" stroke="#38B6FF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        
+  <!-- Vertical Divider -->
+  <line x1="150" y1="25" x2="150" y2="95" stroke="#082A4D" stroke-width="2.5" />
+  
+  <!-- Text Elements -->
+  <text x="165" y="45" font-family="'Montserrat', sans-serif" font-size="28" font-weight="500" letter-spacing="4.5" fill="#082A4D">PLATINUM</text>
+  <text x="165" y="75" font-family="'Lora', serif" font-size="26" font-weight="400" letter-spacing="1.5" fill="#082A4D">Carers</text>
+  <text x="165" y="95" font-family="'Montserrat', sans-serif" font-size="10" font-weight="400" letter-spacing="1" fill="#555555">Your health. Our priority</text>
+</svg>

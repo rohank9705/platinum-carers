@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Use | Platinum Carers Ltd</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/Platinum_Carers_LOGO_JPEG-removebg-preview.png"
+    />
+
+    <style>
+      /* Global Variables */
+      :root {
+        --primary-navy: #0b2545;
+        --primary-cyan: #38b6ff;
+        --text-main: #333333;
+        --text-muted: #666666;
+        --bg-main: #f4f7f6;
+        --bg-white: #ffffff;
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Inter", sans-serif;
+      }
+
+      /* General Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: var(--font-body);
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        line-height: 1.7;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Header Styles */
+      .main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff; /* Forces a solid opaque white */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+        height: 90px;
+        z-index: 1000;
+        border-bottom: 1px solid #082a4d;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); /* Keeps the shadow clean */
+      }
+
+      .main-header.sticky {
+        position: sticky;
+        background-color: #ffffff; /* Double-ensures solidity on scroll */
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        height: 120px; /* Match header height so it doesn't push things around */
+        /* This prevents the header from hiding the zoomed logo */
+        overflow: visible;
+      }
+
+      .logo a {
+        display: block;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .header__logo-img {
+        margin-top: 15px;
+        width: 300px !important;
+        height: auto !important;
+
+        /* Keep the zoom, but you might need to lower it to 1.3 or 1.4 now */
+        transform: scale(1.4);
+        transform-origin: left center;
+        transition: opacity 0.3s ease;
+      }
+      .nav-links {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        font-weight: 500;
+      }
+      .nav-links a:hover {
+        color: var(--primary-cyan);
+      }
+      .btn-primary {
+        background-color: var(--primary-navy);
+        color: var(--bg-white);
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+      .btn-primary:hover {
+        background-color: var(--primary-cyan);
+        color: var(--bg-white);
+      }
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      /* Policy Layout Container */
+      .policy-wrapper {
+        max-width: 900px;
+        margin: 50px auto;
+        background-color: var(--bg-white);
+        padding: 60px 80px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      }
+
+      .policy-wrapper h1 {
+        font-family: var(--font-heading);
+        color: var(--primary-navy);
+        font-size: 2.5rem;
+        border-bottom: 3px solid var(--primary-cyan);
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+      }
+
+      .policy-wrapper h2 {
+        font-family: var(--font-heading);
+        color: var(--primary-navy);
+        font-size: 1.5rem;
+        margin-top: 40px;
+        margin-bottom: 15px;
+      }
+
+      .policy-wrapper p {
+        margin-bottom: 20px;
+        color: var(--text-muted);
+      }
+
+      .policy-wrapper ul {
+        margin-bottom: 25px;
+        color: var(--text-muted);
+        padding-left: 20px;
+      }
+
+      .policy-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .policy-wrapper strong {
+        color: var(--primary-navy);
+      }
+
+      .meta-info {
+        background-color: var(--bg-main);
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 40px;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+      }
+
+      .meta-info strong {
+        color: var(--primary-navy);
+      }
+
+      /* Footer Styles */
+      .main-footer {
+        background-color: var(--primary-navy);
+        color: var(--bg-white);
+        padding: 60px 50px 20px;
+        font-family: var(--font-body);
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+      .footer-col h3 {
+        font-family: var(--font-heading);
+        color: var(--primary-cyan);
+        margin-bottom: 20px;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-links li {
+        margin-bottom: 12px;
+        color: #a0b0c0;
+      }
+      .footer-links a {
+        color: #a0b0c0;
+        transition: color 0.3s;
+      }
+      .footer-links a:hover {
+        color: var(--bg-white);
+      }
+      .social-links a {
+        display: inline-block;
+        margin-right: 15px;
+        color: var(--bg-white);
+        text-decoration: none;
+      }
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        font-size: 0.9rem;
+        color: #a0b0c0;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .mobile-toggle {
+          display: block;
+        }
+        .policy-wrapper {
+          margin: 20px;
+          padding: 30px;
+        }
+        .main-header,
+        .main-footer {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="main-header sticky">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="images/Platinum_Carers_LOGO_JPEG-removebg-preview.png"
+            alt="Platinum Carers LTD Logo"
+            class="header__logo-img"
+          />
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#team">Our Family</a>
+        <a href="index.html#locations">Locations</a>
+        <a href="index.html#careers">Careers</a>
+        <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+      </nav>
+    </header>
+
+    <!-- Main Policy Content -->
+    <main class="policy-wrapper">
+      <h1>Terms of Use</h1>
+
+      <div class="meta-info">
+        <strong>Effective Date:</strong> July 13, 2026<br />
+        <strong>Company Name:</strong> Platinum Carers Ltd<br />
+        <strong>Company Number:</strong> SC878500<br />
+        <strong>Registered Office:</strong> 41 Morrison Street, Glasgow,
+        Scotland, G5 8LB
+      </div>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>
+        Welcome to Platinum Carers Ltd. By accessing our website, booking our
+        domiciliary care services, or interacting with our digital platforms,
+        you agree to comply with and be bound by these Terms of Use. If you do
+        not agree to these terms, please refrain from using our website or
+        services.
+      </p>
+
+      <h2>2. About Our Services</h2>
+      <p>
+        Platinum Carers Ltd is a family-owned, care-at-home provider registered
+        with the Care Inspectorate, delivering tailored personal care, domestic
+        support, meal preparation, medication support, and specialized live-in
+        care across Glasgow. All services are subject to an initial care needs
+        assessment and a formal care agreement.
+      </p>
+
+      <h2>3. Website Use and Intellectual Property</h2>
+      <ul>
+        <li>
+          <strong>Ownership:</strong> All content, logos (including the Platinum
+          Carers brand and heart-pulse icon), text, graphics, and images
+          displayed on this website are the property of Platinum Carers Ltd and
+          are protected by UK and international intellectual property laws.
+        </li>
+        <li>
+          <strong>Permitted Use:</strong> You may view, download, and print
+          pages from the website for your personal, non-commercial use regarding
+          inquiries about our care services.
+        </li>
+        <li>
+          <strong>Restrictions:</strong> You must not copy, reproduce,
+          republish, download, post, broadcast, or transmit any content from
+          this site for commercial purposes without prior written consent from
+          Platinum Carers Ltd.
+        </li>
+      </ul>
+
+      <h2>4. User Conduct and Responsibilities</h2>
+      <p>When using our website or communicating with our team, you agree:</p>
+      <ul>
+        <li>
+          Not to use the site in any way that breaches any applicable local,
+          national, or international law or regulation.
+        </li>
+        <li>
+          Not to transmit any unsolid or unauthorized advertising (spam) via our
+          contact forms.
+        </li>
+        <li>
+          Not to attempt to gain unauthorized access to our server, database, or
+          digital care management systems (including Google Drive cloud
+          facilities).
+        </li>
+      </ul>
+
+      <h2>5. Care Service Bookings and Contracts</h2>
+      <ul>
+        <li>
+          <strong>Assessments:</strong> Before any care package commences, a
+          free in-home or virtual care assessment must be completed by our
+          Registered Manager to determine individual needs, risks, and desired
+          outcomes.
+        </li>
+        <li>
+          <strong>Agreements:</strong> Specific terms regarding billing rates
+          (e.g., standard hourly rates starting at £25.00), visit scheduling,
+          and customized care plans will be outlined in a separate, formal Care
+          Agreement prior to service delivery.
+        </li>
+        <li>
+          <strong>Payments:</strong> Invoices are issued in arrears on standard
+          30-day payment terms, and payments are managed via BACS or agreed
+          local authority funding streams.
+        </li>
+      </ul>
+
+      <h2>6. Limitation of Liability</h2>
+      <ul>
+        <li>
+          <strong>Website Availability:</strong> We strive to ensure our website
+          is available 24/7, but we do not guarantee uninterrupted access and
+          will not be liable if the site is temporarily unavailable due to
+          technical issues or maintenance.
+        </li>
+        <li>
+          <strong>External Links:</strong> Our website may contain links to
+          third-party websites (such as the Care Inspectorate, SPSO, or local
+          health authorities). We assume no responsibility for the content,
+          privacy policies, or practices of any third-party sites.
+        </li>
+      </ul>
+
+      <h2>7. Privacy and Data Protection</h2>
+      <p>
+        Your use of our website and services is also governed by our
+        <strong>Privacy Policy</strong>, which outlines how we collect, process,
+        and secure your personal and special category health data under the UK
+        GDPR and Data Protection Act 2018.
+      </p>
+
+      <h2>8. Governing Law</h2>
+      <p>
+        These Terms of Use are governed by and construed in accordance with the
+        laws of <strong>Scotland</strong>. Any disputes relating to these terms
+        shall be subject to the exclusive jurisdiction of the courts of
+        Scotland.
+      </p>
+
+      <h2>9. Contact Information</h2>
+      <p>
+        If you have any questions, concerns, or inquiries regarding these Terms
+        of Use, please contact our management team:
+      </p>
+      <ul>
+        <li>
+          <strong>Registered Office:</strong> 41 Morrison Street, Glasgow,
+          Scotland, G5 8LB
+        </li>
+        <li><strong>Email:</strong> headoffice@platinum-carers.com</li>
+        <li><strong>Telephone:</strong> 01234 567 890 / 0141 287 0555</li>
+      </ul>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-top grid-container">
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <h2
+            class="footer-logo"
+            style="
+              color: var(--bg-white);
+              margin-bottom: 1rem;
+              font-family: var(--font-heading);
+            "
+          >
+            PLATINUM <span style="color: var(--primary-cyan)">Carers</span>
+          </h2>
+          <p style="color: #a0b0c0; font-size: 0.9rem">
+            Delivering high-quality, professional, and tailored care services to
+            support independence, comfort, and dignity at home.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#services">Our Services</a></li>
+            <li><a href="index.html#team">Our Family</a></li>
+            <li><a href="index.html#locations">Locations</a></li>
+            <li><a href="index.html#careers">Careers & Recruitment</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li style="color: var(--bg-white); font-weight: 600">
+              Head Office
+            </li>
+            <li>📞 01234 567 890</li>
+            <li>
+              <a href="mailto:head-office@platinum-carers.com"
+                >head-office@platinum-carers.com</a
+              >
+            </li>
+            <li>📍 3rd Floor 73 Kingston Street | G5 8BJ</li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal & Policies -->
+        <div class="footer-col">
+          <h3>Legal Info</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="Platinum_Carers_Privacy_Policy.pdf" download
+                >Download Privacy Policy (PDF)</a
+              >
+            </li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Safeguarding Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+        <div class="creator-tag">
+            <p>&copy; 2026 Platinum Carers Ltd. All rights reserved. | Designed & Developed by <a href="https://github.com/rohank9705" target="_blank" rel="noopener noreferrer">Rohan</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
