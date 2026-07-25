@@ -350,12 +350,19 @@
   <footer class="main-footer">
     <div class="footer-top grid-container">
       
-      <!-- Column 1: Brand Info -->
+      <!-- Column 1: Brand Info (Logo, Paragraph, Socials) -->
       <div class="footer-col brand-col">
-        <h2 class="footer-logo" style="color: var(--bg-white); margin-bottom: 1rem; font-family: var(--font-heading);">
-          PLATINUM <span style="color: var(--primary-cyan);">Carers</span>
-        </h2>
-        <p style="color: #A0B0C0; font-size: 0.9rem;">Delivering high-quality, professional, and tailored care services to support independence, comfort, and dignity at home.</p>
+        
+        <!-- Tightly cropped white container for logo -->
+        <div style="background-color: #ffffff; border-radius: 8px; width: 260px; height: 80px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 1rem;">
+          <img src="images/Platinum_Carers_LOGO_JPEG-removebg-preview.png" alt="Platinum Carers Logo" style="width: 260px; height: auto; transform: scale(1.4); display: block;" />
+        </div>
+        
+        <!-- Paragraph stays INSIDE Column 1 -->
+        <p style="color: #a0b0c0; line-height: 1.6; margin-bottom: 1.5rem;">
+          Delivering high-quality, professional, and tailored care services to support independence, comfort, and dignity at home.
+        </p>
+        
         <div class="social-links">
           <a href="#" aria-label="Facebook">FB</a>
           <a href="#" aria-label="Twitter">X</a>
@@ -367,12 +374,12 @@
       <div class="footer-col">
         <h3>Quick Links</h3>
         <ul class="footer-links">
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#services">Our Services</a></li>
-          <li><a href="index.html#team">Our Family</a></li>
-          <li><a href="index.html#locations">Locations</a></li>
-          <li><a href="index.html#careers">Careers & Recruitment</a></li>
-          <li><a href="index.html#contact">Contact Us</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#what-we-do">What we do</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#careers">Careers & Recruitment</a></li>
+          <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
 
@@ -380,9 +387,9 @@
       <div class="footer-col">
         <h3>Contact Us</h3>
         <ul class="footer-links">
-          <li style="color: var(--bg-white); font-weight: 600;">Head Office</li>
+          <li style="color: var(--white); font-weight: 600;">Head Office</li>
           <li>📞 01234 567 890</li>
-          <li><a href="mailto:head-office@platinum-carers.com">head-office@platinum-carers.com</a></li>
+          <li><a href="mailto:headoffice@platinum-carers.com">headoffice@platinum-carers.com</a></li>
           <li>📍 2nd Floor 73 Kingston Street | G5 8BJ</li>
         </ul>
       </div>
@@ -391,11 +398,11 @@
       <div class="footer-col">
         <h3>Legal Info</h3>
         <ul class="footer-links">
-          <!-- UPDATED DOWNLOAD LINK HERE -->
+          <li><a href="pp.html">Privacy Policy</a></li>
           <li><a href="Platinum_Carers_Privacy_Policy.pdf" download>Download Privacy Policy (PDF)</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Cookie Policy</a></li>
-          <li><a href="#">Safeguarding Policy</a></li>
+          <li><a href="tou.html">Terms of Use</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="safeguarding.html">Safeguarding Policy</a></li>
         </ul>
       </div>
 
