@@ -14,7 +14,7 @@
   --text-light: #555555;
   
   /* --- FONTS & SPACING --- */
-  --font-heading: 'Lora', serif;
+  --font-heading: 'DM Sans', sans-serif;
   --font-body: 'Montserrat', sans-serif;
   --border-radius-lg: 24px;
   --box-shadow-soft: 0 12px 35px rgba(8, 42, 77, 0.06); /* Shadow is now tinted navy */
@@ -158,7 +158,7 @@ h1, h2, h3, h4 {
   width: 100%;
   height: 100%;
   /* An 85% opaque version of your original gradient to keep text readable */
-  background: linear-gradient(135deg, rgba(230, 242, 241, 0.6) 0%, rgba(244, 247, 246, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(230, 242, 241, 0.308) 0%, rgba(244, 247, 246, 0.9) 100%);
   z-index: 1;
 }
 
