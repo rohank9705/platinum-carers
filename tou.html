@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terms of Use | Platinum Carers Ltd</title>
 
+    <link rel="stylesheet" href="style.css"/>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600&family=Playfair+Display:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Unified Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,700;9..40,800&family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet" />
 
     <link
       rel="icon"
@@ -32,8 +29,23 @@
         --text-muted: #666666;
         --bg-main: #f4f7f6;
         --bg-white: #ffffff;
-        --font-heading: "Playfair Display", serif;
-        --font-body: "Inter", sans-serif;
+        --font-heading: "DM Sans", sans-serif;
+        --font-body: "Montserrat", sans-serif;
+      }
+      .nav-links a,
+      .footer-links a,
+      .footer-col p,
+      .footer-links li {
+        font-family: var(--font-body) !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.3px;
+      }
+
+      /* 3. Force Footer Headings to use the modern heading font */
+      .footer-col h3 {
+        font-family: var(--font-heading) !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.2px;
       }
 
       /* General Styles */
@@ -51,81 +63,6 @@
         color: inherit;
       }
 
-      /* Header Styles */
-      .main-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #ffffff; /* Forces a solid opaque white */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 5%;
-        height: 90px;
-        z-index: 1000;
-        border-bottom: 1px solid #082a4d;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); /* Keeps the shadow clean */
-      }
-
-      .main-header.sticky {
-        position: sticky;
-        background-color: #ffffff; /* Double-ensures solidity on scroll */
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        flex-shrink: 0;
-        height: 120px; /* Match header height so it doesn't push things around */
-        /* This prevents the header from hiding the zoomed logo */
-        overflow: visible;
-      }
-
-      .logo a {
-        display: block;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-      }
-
-      .header__logo-img {
-        margin-top: 15px;
-        width: 300px !important;
-        height: auto !important;
-
-        /* Keep the zoom, but you might need to lower it to 1.3 or 1.4 now */
-        transform: scale(1.4);
-        transform-origin: left center;
-        transition: opacity 0.3s ease;
-      }
-      .nav-links {
-        display: flex;
-        gap: 25px;
-        align-items: center;
-        font-weight: 500;
-      }
-      .nav-links a:hover {
-        color: var(--primary-cyan);
-      }
-      .btn-primary {
-        background-color: var(--primary-navy);
-        color: var(--bg-white);
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background 0.3s;
-      }
-      .btn-primary:hover {
-        background-color: var(--primary-cyan);
-        color: var(--bg-white);
-      }
-      .mobile-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-      }
 
       /* Policy Layout Container */
       .policy-wrapper {
@@ -186,53 +123,7 @@
         color: var(--primary-navy);
       }
 
-      /* Footer Styles */
-      .main-footer {
-        background-color: var(--primary-navy);
-        color: var(--bg-white);
-        padding: 60px 50px 20px;
-        font-family: var(--font-body);
-      }
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 40px;
-        margin-bottom: 40px;
-      }
-      .footer-col h3 {
-        font-family: var(--font-heading);
-        color: var(--primary-cyan);
-        margin-bottom: 20px;
-      }
-      .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .footer-links li {
-        margin-bottom: 12px;
-        color: #a0b0c0;
-      }
-      .footer-links a {
-        color: #a0b0c0;
-        transition: color 0.3s;
-      }
-      .footer-links a:hover {
-        color: var(--bg-white);
-      }
-      .social-links a {
-        display: inline-block;
-        margin-right: 15px;
-        color: var(--bg-white);
-        text-decoration: none;
-      }
-      .footer-bottom {
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 20px;
-        font-size: 0.9rem;
-        color: #a0b0c0;
-      }
+    
 
       /* Responsive */
       @media (max-width: 768px) {
@@ -267,6 +158,7 @@
         </a>
       </div>
 
+      <!-- NEW: Hamburger Button -->
       <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
 
       <nav class="nav-links">
@@ -418,8 +310,6 @@
     <!-- Footer -->
     <footer class="main-footer">
       <div class="footer-top grid-container">
-        <!-- Column 1: Brand Info -->
-        <div class="footer-top grid-container">
       
       <!-- Column 1: Brand Info (Logo, Paragraph, Socials) -->
       <div class="footer-col brand-col">
@@ -445,12 +335,12 @@
       <div class="footer-col">
         <h3>Quick Links</h3>
         <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#what-we-do">What we do</a></li>
-          <li><a href="#locations">Locations</a></li>
-          <li><a href="#careers">Careers & Recruitment</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Our Services</a></li>
+          <li><a href="index.html#what-we-do">What we do</a></li>
+          <li><a href="index.html#locations">Locations</a></li>
+          <li><a href="index.html#careers">Careers & Recruitment</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
         </ul>
       </div>
 
@@ -459,7 +349,7 @@
         <h3>Contact Us</h3>
         <ul class="footer-links">
           <li style="color: var(--white); font-weight: 600;">Head Office</li>
-          <li>📞 01234 567 890</li>
+          <li>📞 01234 567 89</li>
           <li><a href="mailto:headoffice@platinum-carers.com">headoffice@platinum-carers.com</a></li>
           <li>📍 2nd Floor 73 Kingston Street | G5 8BJ</li>
         </ul>
@@ -480,9 +370,18 @@
     </div>
 
       <!-- Bottom Copyright Bar -->
-        <div class="creator-tag">
-            <p>&copy; 2026 Platinum Carers Ltd. All rights reserved. | Designed & Developed by <a href="https://github.com/rohank9705" target="_blank" rel="noopener noreferrer">Rohan</a></p>
-        </div>
+      <div class="creator-tag">
+        <p>
+          &copy; 2026 Platinum Carers Ltd. All rights reserved. | Designed &
+          Developed by
+          <a
+            href="https://github.com/rohank9705"
+            target="_blank"
+            rel="noopener noreferrer"
+            >RKHN STUDIO</a
+          >
+        </p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
