@@ -62,3 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeObserver.observe(element);
   });
 });
+
+// Require reCAPTCHA on all forms before submitting
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', function(event) {
+    // Google injects a hidden textarea with this name when the widget loads
+    const captchaResponse = form.querySelector('[name="g-recaptcha-response"]').value;
+    
+    // If the hidden field is empty, the user hasn't clicked the box
+    if (!captchaResponse) {
+      event.preventDefault(); // Stops the form from submitting
+      alert("Please check the 'I'm not a robot' box before submitting!");
+    }
+  });
+});
