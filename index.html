@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="style.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,700;9..40,800&family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,700;9..40,800&family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -74,129 +78,94 @@
     </section>
 
     <section id="services" class="section-light">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up" data-aos-delay="100">
         <h2>Our Care Services</h2>
         <p>Tailored support packages designed with patience and empathy.</p>
       </div>
 
       <div class="grid-container">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div
-              class="flip-card-front"
-              style="background-image: url(&quot;images/nurse1.jpg&quot;)"
-            >
-              <div class="front-content">
-                <h3>Personal Care</h3>
-              </div>
-            </div>
-            <div class="flip-card-back">
-              <h3>Personal Care</h3>
-              <p>
-                Discreet, dignified assistance with daily routines including
-                washing, dressing, continence management, and safe mobility
-                support.
-              </p>
-              <a class="learn_more_links" href="personalcare.html"
-                >Learn More</a
-              >
-            </div>
-          </div>
+  
+  <!-- Card 1 (Delay: 150) -->
+  <div class="flip-card" data-aos="fade-right" data-aos-delay="100">
+    <div class="flip-card-inner">
+      <div class="flip-card-front" style="background-image: url('images/nurse1.jpg')">
+        <div class="front-content">
+          <h3>Personal Care</h3>
         </div>
+      </div>
+      <div class="flip-card-back">
+        <h3>Personal Care</h3>
+        <p>Discreet, dignified assistance with daily routines including washing, dressing, continence management, and safe mobility support.</p>
+        <a class="learn_more_links" href="personalcare.html">Learn More</a>
+      </div>
+    </div>
+  </div>
 
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div
-              class="flip-card-front"
-              style="background-image: url(&quot;images/overnight.png&quot;)"
-            >
-              <div class="front-content">
-                <h3>Live-in & Overnight</h3>
-              </div>
-            </div>
-            <div class="flip-card-back">
-              <h3>Live-in & Overnight</h3>
-              <p>
-                Round-the-clock reassurance with waking or sleeping night
-                support, and comprehensive live-in care for continuous daily
-                assistance.
-              </p>
-              <a class="learn_more_links" href="livein.html">Learn More</a>
-            </div>
-          </div>
+  <!-- Card 2 (Delay: 300) -->
+  <div class="flip-card" data-aos="fade-right" data-aos-delay="150">
+    <div class="flip-card-inner">
+      <div class="flip-card-front" style="background-image: url('images/overnight.png')">
+        <div class="front-content">
+          <h3>Live-in & Overnight</h3>
         </div>
+      </div>
+      <div class="flip-card-back">
+        <h3>Live-in & Overnight</h3>
+        <p>Round-the-clock reassurance with waking or sleeping night support, and comprehensive live-in care for continuous daily assistance.</p>
+        <a class="learn_more_links" href="livein.html">Learn More</a>
+      </div>
+    </div>
+  </div>
 
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div
-              class="flip-card-front"
-              style="
-                background-image: url(&quot;images/clay-banks-cEzMOp5FtV4-unsplash.jpg&quot;);
-              "
-            >
-              <div class="front-content">
-                <h3>Domestic Support</h3>
-              </div>
-            </div>
-            <div class="flip-card-back">
-              <h3>Domestic Support</h3>
-              <p>
-                General household management, including light cleaning, laundry,
-                and ironing, to maintain a safe and comfortable home
-                environment.
-              </p>
-              <a class="learn_more_links" href="domestic.html">Learn More</a>
-            </div>
-          </div>
+  <!-- Card 3 (Delay: 450) -->
+  <div class="flip-card" data-aos="fade-right" data-aos-delay="200">
+    <div class="flip-card-inner">
+      <div class="flip-card-front" style="background-image: url('images/clay-banks-cEzMOp5FtV4-unsplash.jpg');">
+        <div class="front-content">
+          <h3>Domestic Support</h3>
         </div>
+      </div>
+      <div class="flip-card-back">
+        <h3>Domestic Support</h3>
+        <p>General household management, including light cleaning, laundry, and ironing, to maintain a safe and comfortable home environment.</p>
+        <a class="learn_more_links" href="domestic.html">Learn More</a>
+      </div>
+    </div>
+  </div>
 
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div
-              class="flip-card-front"
-              style="
-                background-image: url(&quot;images/nappy-dcBO4nt4MRE-unsplash.jpg&quot;);
-              "
-            >
-              <div class="front-content">
-                <h3>Medication Support</h3>
-              </div>
-            </div>
-            <div class="flip-card-back">
-              <h3>Medication Support</h3>
-              <p>
-                Reliable prompts and assistance with prescribed medication,
-                detailed usage recording, and coordination with healthcare
-                professionals.
-              </p>
-              <a class="learn_more_links" href="medication.html">Learn More</a>
-            </div>
-          </div>
+  <!-- Card 4 (Delay: 600) -->
+  <div class="flip-card" data-aos="fade-right" data-aos-delay="100">
+    <div class="flip-card-inner">
+      <div class="flip-card-front" style="background-image: url('images/nappy-dcBO4nt4MRE-unsplash.jpg');">
+        <div class="front-content">
+          <h3>Medication Support</h3>
         </div>
+      </div>
+      <div class="flip-card-back">
+        <h3>Medication Support</h3>
+        <p>Reliable prompts and assistance with prescribed medication, detailed usage recording, and coordination with healthcare professionals.</p>
+        <a class="learn_more_links" href="medication.html">Learn More</a>
+      </div>
+    </div>
+  </div>
 
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div
-              class="flip-card-front"
-              style="
-                background-image: url(&quot;images/ChatGPT\ Image\ Jul\ 20\,\ 2026\,\ 05_21_54\ PM.png&quot;);
-              "
-            >
-              <div class="front-content">
-                <h3>Meal Preparation</h3>
-              </div>
-            </div>
-            <div class="flip-card-back">
-              <h3>Meal Preparation</h3>
-              <p>
-                Preparing fresh, nutritious meals tailored to specific dietary
-                needs and cultural preferences, alongside hydration and feeding
-                support.
-              </p>
-              <a class="learn_more_links" href="mealprep.html">Learn More</a>
-            </div>
-          </div>
+  <!-- Card 5 (Delay: 750) -->
+  <div class="flip-card" data-aos="fade-right" data-aos-delay="150">
+    <div class="flip-card-inner">
+      <div class="flip-card-front" style="background-image: url('images/ChatGPT\ Image\ Jul\ 20\,\ 2026\,\ 05_21_54\ PM.png');">
+        <div class="front-content">
+          <h3>Meal Preparation</h3>
         </div>
+      </div>
+      <div class="flip-card-back">
+        <h3>Meal Preparation</h3>
+        <p>Preparing fresh, nutritious meals tailored to specific dietary needs and cultural preferences, alongside hydration and feeding support.</p>
+        <a class="learn_more_links" href="mealprep.html">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+</div>
 
         <!-- <div class="flip-card">
         <div class="flip-card-inner">
@@ -212,11 +181,10 @@
           </div>
         </div>
       </div> -->
-      </div>
     </section>
 
     <section id="what-we-do" class="section-white">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up" data-aos-delay="100">
         <h2>What We Do</h2>
         <p>
           Compassionate, professional, and tailored care delivered straight from
@@ -236,7 +204,7 @@
         "
       >
         <!-- Pillar 1 -->
-        <div style="text-align: center">
+        <div style="text-align: center" data-aos="fade-up" data-aos-delay="160">
           <div style="font-size: 2.5rem; margin-bottom: 1rem; line-height: 1">
             🏠
           </div>
@@ -265,7 +233,7 @@
         </div>
 
         <!-- Pillar 2 -->
-        <div style="text-align: center">
+        <div style="text-align: center" data-aos="fade-up" data-aos-delay="160">
           <div style="font-size: 2.5rem; margin-bottom: 1rem; line-height: 1">
             📋
           </div>
@@ -297,7 +265,7 @@
         </div>
 
         <!-- Pillar 3 -->
-        <div style="text-align: center">
+        <div style="text-align: center" data-aos="fade-up" data-aos-delay="160">
           <div style="font-size: 2.5rem; margin-bottom: 1rem; line-height: 1">
             🤝
           </div>
@@ -538,7 +506,10 @@
             accept=".pdf,.doc,.docx"
             required
           />
-          <div class="g-recaptcha" data-sitekey="6Lc0sqUtAAAAAB8-a-aSCvHUF04ovWo6XuR0854o"></div>
+          <div
+            class="g-recaptcha"
+            data-sitekey="6Lc0sqUtAAAAAB8-a-aSCvHUF04ovWo6XuR0854o"
+          ></div>
           <button type="submit" class="btn btn-primary">
             Submit Application
           </button>
@@ -562,6 +533,7 @@
             rows="4"
             required
           ></textarea>
+          <div class="g-recaptcha" data-sitekey="6Lc0sqUtAAAAAB8-a-aSCvHUF04ovWo6XuR0854o"></div>
           <button type="submit" class="btn btn-secondary">Send Inquiry</button>
         </form>
       </div>
@@ -572,64 +544,91 @@
        ========================================= -->
     <footer class="main-footer">
       <div class="footer-top grid-container">
-      
-      <!-- Column 1: Brand Info (Logo, Paragraph, Socials) -->
-      <div class="footer-col brand-col">
-        
-        <!-- Tightly cropped white container for logo -->
-        <div style="background-color: #ffffff; border-radius: 8px; width: 260px; height: 80px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 1rem;">
-          <img src="images/Platinum_Carers_LOGO_JPEG-removebg-preview.png" alt="Platinum Carers Logo" style="width: 260px; height: auto; transform: scale(1.4); display: block;" />
+        <!-- Column 1: Brand Info (Logo, Paragraph, Socials) -->
+        <div class="footer-col brand-col">
+          <!-- Tightly cropped white container for logo -->
+          <div
+            style="
+              background-color: #ffffff;
+              border-radius: 8px;
+              width: 260px;
+              height: 80px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+              margin-bottom: 1rem;
+            "
+          >
+            <img
+              src="images/Platinum_Carers_LOGO_JPEG-removebg-preview.png"
+              alt="Platinum Carers Logo"
+              style="
+                width: 260px;
+                height: auto;
+                transform: scale(1.4);
+                display: block;
+              "
+            />
+          </div>
+
+          <!-- Paragraph stays INSIDE Column 1 -->
+          <p style="color: #a0b0c0; line-height: 1.6; margin-bottom: 1.5rem">
+            Delivering high-quality, professional, and tailored care services to
+            support independence, comfort, and dignity at home.
+          </p>
+
+          <div class="social-links">
+            <a href="https://tinyurl.com/bj52kwcn" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+          </div>
         </div>
-        
-        <!-- Paragraph stays INSIDE Column 1 -->
-        <p style="color: #a0b0c0; line-height: 1.6; margin-bottom: 1.5rem;">
-          Delivering high-quality, professional, and tailored care services to support independence, comfort, and dignity at home.
-        </p>
-        
-        <div class="social-links">
-          <a href="#" aria-label="Facebook">FB</a>
-          <a href="#" aria-label="Twitter">X</a>
-          <a href="#" aria-label="LinkedIn">LI</a>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#what-we-do">What we do</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#careers">Careers & Recruitment</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li style="color: var(--white); font-weight: 600">Head Office</li>
+            <li>📞 01234 567 89</li>
+            <li>
+              <a href="mailto:headoffice@platinum-carers.com"
+                >headoffice@platinum-carers.com</a
+              >
+            </li>
+            <li>📍 2nd Floor 73 Kingston Street | G5 8BJ</li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal & Policies -->
+        <div class="footer-col">
+          <h3>Legal Info</h3>
+          <ul class="footer-links">
+            <li><a href="pp.html">Privacy Policy</a></li>
+            <li>
+              <a href="Platinum_Carers_Privacy_Policy.pdf" download
+                >Download Privacy Policy (PDF)</a
+              >
+            </li>
+            <li><a href="tou.html">Terms of Use</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="safeguarding.html">Safeguarding Policy</a></li>
+          </ul>
         </div>
       </div>
-
-      <!-- Column 2: Quick Links -->
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#what-we-do">What we do</a></li>
-          <li><a href="#locations">Locations</a></li>
-          <li><a href="#careers">Careers & Recruitment</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Contact Info -->
-      <div class="footer-col">
-        <h3>Contact Us</h3>
-        <ul class="footer-links">
-          <li style="color: var(--white); font-weight: 600;">Head Office</li>
-          <li>📞 01234 567 89</li>
-          <li><a href="mailto:headoffice@platinum-carers.com">headoffice@platinum-carers.com</a></li>
-          <li>📍 2nd Floor 73 Kingston Street | G5 8BJ</li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Legal & Policies -->
-      <div class="footer-col">
-        <h3>Legal Info</h3>
-        <ul class="footer-links">
-          <li><a href="pp.html">Privacy Policy</a></li>
-          <li><a href="Platinum_Carers_Privacy_Policy.pdf" download>Download Privacy Policy (PDF)</a></li>
-          <li><a href="tou.html">Terms of Use</a></li>
-          <li><a href="cookies.html">Cookie Policy</a></li>
-          <li><a href="safeguarding.html">Safeguarding Policy</a></li>
-        </ul>
-      </div>
-
-    </div>
 
       <!-- Bottom Copyright Bar -->
       <div class="creator-tag">
@@ -645,6 +644,15 @@
         </p>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800 /* Controls how long the animation takes (in milliseconds) */,
+        once: true /* Ensures the animation only plays once as you scroll down */,
+        offset: 100 /* The distance in pixels the element must be in the viewport to trigger */,
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
